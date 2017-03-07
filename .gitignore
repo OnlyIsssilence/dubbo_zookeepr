@@ -1,5 +1,4 @@
 # Created by .ignore support plugin (hsz.mobi)
-.gitignore
 .idea/
 category-api/category-api.iml
 category-api/target/
@@ -7,10 +6,8 @@ category-common/category-common.iml
 category-common/target/
 category-parent.iml
 category-service/category-service.iml
-category-service/src/test/java/com/onlyisssilence/muya/test/
 category-service/target/
 category-web/category-web.iml
 category-web/src/main/java/com/onlyisssilence/muya/intercepter/
-category-web/src/test/java/com/onlyisssilence/muya/test/
 category-web/target/
 out/
