@@ -26,21 +26,23 @@
     <dubbo:service interface="com.unj.dubbotest.provider.DemoService" ref="demoService" />-->
 
     <!-- 具体的实现bean -->
-    <bean id="sayHelloService" class="com.onlyisssilence.muya.impl.SayHelloServiceImpl" />
+    <bean id="sayHelloService" class="com.onlyisssilence.muya.impl.SayHelloServiceImpl"/>
 
     <!-- 提供方应用信息，用于计算依赖关系 -->
-    <dubbo:application name="MuYa_provider"  />
+    <dubbo:application name="MuYa_provider"/>
 
-    <!-- 使用multicast广播注册中心暴露服务地址
-    <dubbo:registry address="multicast://224.5.6.7:1234" />-->
+    <!--zookeeper单机配置-->
+    <!--<dubbo:registry protocol="zookeeper" address="192.168.28.128:2181"/>-->
 
-    <!-- 使用zookeeper注册中心暴露服务地址 -->
-    <dubbo:registry address="zookeeper://127.0.0.1:2181" />
+    <!--zookeeper集群配置-->
+    <dubbo:registry
+            protocol="zookeeper"
+            address="192.168.28.128:2181,192.168.28.129:2181,129.168.28.131:2181"/>
 
     <!-- 用dubbo协议在20880端口暴露服务 -->
-    <dubbo:protocol name="dubbo" port="20880" />
+    <dubbo:protocol name="dubbo" port="20880"/>
 
     <!-- 声明需要暴露的服务接口 -->
-    <dubbo:service interface="com.onlyisssilence.muya.SayHelloService" ref="sayHelloService" />
+    <dubbo:service interface="com.onlyisssilence.muya.SayHelloService" ref="sayHelloService"/>
 
 </beans>
